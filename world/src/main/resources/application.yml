@@ -1,0 +1,31 @@
+
+spring:
+  jpa:
+    show-sql: true
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://one-anno-db-instance-1.ck5eg0253zbt.ap-northeast-2.rds.amazonaws.com:3306/borad?characterEncoding=UTF-8&autoReconnection=true&useSSL=false
+    username: onedatatech
+    password: 1epdlxjrltnf!
+
+    jpa:
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      open-in-view: false
+      show-sql: true
+      hibernate:
+        format_sql: true
+        ddl-auto: create
+
+    logging:
+      level:
+        org:
+          hibernate:
+            SQL: DEBUG
+            type:
+              descriptor:
+                sql:
+                  BasicBinder: TRACE
